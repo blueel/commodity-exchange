@@ -49,10 +49,10 @@ export default {
   },
   methods: {
     goSearch() {
-      this.$router.push(`/MySearch/${this.searchResult}`)
+      this.$router.push(`/MySearch/${this.searchResult}`,()=> {},()=> {})
     },
     goHome() {
-      this.$router.push('/MyHome')
+      this.$router.push('/MyHome',()=>{},()=>{})
       // console.log(this);
     }
   }

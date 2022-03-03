@@ -25,8 +25,9 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 import "./css/swiper.min.css";
-import TypeNav from './TypeNav'
+import TypeNav from '../../components/TypeNav'
 import ListContainer from './ListContainer'
 import TodayRecommend from './TodayRecommend'
 import Rank from './Rank'
@@ -42,7 +43,7 @@ export default {
         Like,
         Floor,
         Brand
-    }
+    },
 };
 </script>
 

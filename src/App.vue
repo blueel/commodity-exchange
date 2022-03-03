@@ -10,7 +10,9 @@
 </template>
 
 <script>
-import {mapState,mapGetters,mapActions,mapMutations} from 'vuex'
+import {mapActions} from 'vuex'
+// import reqInstance from './api/request'
+import {request,mockBanner,mockFloor} from './api'
 import MyHeader from './components/MyHeader'
 import MyFooter from './components/MyFooter'
 import MyHome from './pages/MyHome'
@@ -25,11 +27,12 @@ export default {
     MySearch,
     Login
   },
-  methods: {
-  },
-  computed: {
+  async mounted() {
+    this.$store.dispatch('home/categoryList')
+    // console.log('@request',await request());
+    console.log('mockBanner',await mockBanner());
+    console.log('mockFloor',await mockFloor());
   }
-
 }
 </script>
 <style>
