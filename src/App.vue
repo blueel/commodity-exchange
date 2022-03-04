@@ -30,8 +30,8 @@ export default {
   async mounted() {
     this.$store.dispatch('home/categoryList')
     // console.log('@request',await request());
-    console.log('mockBanner',await mockBanner());
-    console.log('mockFloor',await mockFloor());
+    // console.log('mockBanner',await mockBanner());
+    // console.log('mockFloor',await mockFloor());
   }
 }
 </script>

@@ -11,6 +11,7 @@ reqInstance.interceptors.request.use((config) => {
 })
 reqInstance.interceptors.response.use((resolve) => {
     nprogress.done()
+    console.log('数据响应');
     return resolve
 },(reject) => {
     return reject

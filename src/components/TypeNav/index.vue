@@ -13,7 +13,6 @@
         <a href="###">秒杀</a>
       </nav>
       <div id="demo">
-        <button v-on:click="show = !show">Toggle</button>
         <transition-group
           name="animate__animated animate__bounce"
           enter-active-class="animate__rubberBand"
@@ -97,7 +96,6 @@
               </div>
             </div>
           </div>
-          <div key="2">test</div>
         </transition-group>
       </div>
     </div>
