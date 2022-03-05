@@ -1,9 +1,10 @@
-import {request,mockBanner} from '../../api'
+import {request,mockBanner,mockFloor} from '../../api'
 export default {
     namespaced:'home',
     state:{
         baseCategoryList:[],
         bannerList:[],
+        floorList:[],
         isShow:false
     },
     actions:{
@@ -15,6 +16,10 @@ export default {
           let res = await mockBanner()
         //   console.log('banner执行');
           context.commit('BANNERLIST',res.data.data)
+        },
+        async floorList(context) {
+            let res = await mockFloor()
+            context.commit('FLOORLIST',res.data.data)
         }
     },
     mutations:{
@@ -24,6 +29,9 @@ export default {
         BANNERLIST(state,bannerList) {
             // console.log('修改数据');
             state.bannerList = bannerList
+        },
+        FLOORLIST(state,floorList){
+            state.floorList = floorList
         }
     },
     getters:{}

@@ -16,7 +16,7 @@
     <Like/>
     
     <!--楼层-->
-    <Floor/>
+    <Floor v-for="floorItem in floorList" :key='floorItem.id' :floorItem='floorItem'/>
     <Floor/>
 
     <!--商标-->
@@ -44,6 +44,15 @@ export default {
         Floor,
         Brand
     },
+    computed:{
+      ...mapState('home',['floorList'])
+    },
+    beforeCreate() {
+      this.$store.dispatch('home/floorList')
+
+    },
+    mounted() {
+    }
 };
 </script>
 
